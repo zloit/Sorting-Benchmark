@@ -1,10 +1,6 @@
 <div align="center">
-  <h1>Webpack Template</h1>
+  <h1>Сравнение сортировок</h1>
   <p>
-    Webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.
+    Работа включает в себя реализацию 8 алгоритмов сортировок и сравнения их скорости работы
   </p>
 </div>
-
-Links
-----
-https://zloit.github.io/FSD-Second-task/dist/index.html
