@@ -1,5 +1,25 @@
 doctype html
-html(lang='en')
+html(lang='ru')
 	head
-		
+		title Алгоритмы сортировок
 	body
+		h2 Алгоритмы сортировки
+		div.flex
+			div.list
+				ul.list-unsorted
+			div.section
+				span Исходные данные:
+				button(type='button' class='createArr' onclick="ascend(n,arr)") По возрастанию
+				button(type='button' class='createArr' onclick="backwards(n,arr)") По убыванию
+				button(type='button' class='createArr' onclick="random(n,arr)") Случайно
+			div.section
+				button(type='button' class='sort' onclick="Selection(arr)") Выбором
+				button(type='button' class='sort' onclick="bubble(arr)") Пузырьком
+				button(type='button' class='sort' onclick="insert(arr)") Вставками
+				button(type='button' class='sort' onclick="cocktail(arr)") Шейкером
+				button(type='button' class='sort') Слияния
+				button(type='button' class='sort') Хоара
+				button(type='button' class='sort') Шелла
+				button(type='button' class='sort') Пирамидальная
+			div.list
+				ul.list-sorted
