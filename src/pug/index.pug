@@ -13,13 +13,13 @@ html(lang='ru')
 				button(type='button' class='createArr' onclick="backwards(n,arr)") По убыванию
 				button(type='button' class='createArr' onclick="random(n,arr)") Случайно
 			div.section
-				button(type='button' class='sort' onclick="Selection(arr)") Выбором
+				button(type='button' class='sort' onclick="selection(arr)") Выбором
 				button(type='button' class='sort' onclick="bubble(arr)") Пузырьком
 				button(type='button' class='sort' onclick="insert(arr)") Вставками
 				button(type='button' class='sort' onclick="cocktail(arr)") Шейкером
-				button(type='button' class='sort') Слияния
+				button(type='button' class='sort' onclick="merge_sort(arr)") Слияния
 				button(type='button' class='sort') Хоара
-				button(type='button' class='sort') Шелла
+				button(type='button' class='sort' onclick="Shell(arr)") Шелла
 				button(type='button' class='sort') Пирамидальная
 			div.list
 				ul.list-sorted

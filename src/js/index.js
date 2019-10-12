@@ -91,7 +91,7 @@ function insert(arr) {
 }
 window.insert = insert;
 
-function Selection(arr) {
+function selection(arr) {
 	let sorted = arr.slice();
 	let t1 = performance.now();
 	let n = sorted.length;
@@ -109,4 +109,58 @@ function Selection(arr) {
 	console.log(t2-t1);
 	createList(sortedList,n,sorted);
 }
-window.Selection = Selection;
+window.selection = selection;
+
+function merge_sort(array) {
+	let t1 = performance.now();
+	function merge(left, right){
+		var result = [];
+		var il = 0;
+		var ir = 0;
+		while (il < left.length && ir < right.length){
+		  if (left[il] < right[ir]){
+			result.push(left[il++]);
+		  } else {
+			result.push(right[ir++]);
+		  }
+		}
+	 
+		//merge what is left
+		return result.concat(left.slice(il)).concat(right.slice(ir));
+	  }
+	  function merge_sort(items){
+		//well it is only 1 element
+		if (items.length < 2){
+		  return items;
+		} 
+		var middle = Math.floor(items.length / 2);
+		//create two arrays
+		var left = items.slice(0, middle);
+		var right = items.slice(middle);
+		return merge(merge_sort(left), merge_sort(right));
+	  }
+	//   console.log();
+	let t2 = performance.now();
+	console.log(t2-t1);
+	createList(sortedList,array.length,merge_sort(array));
+}
+window.merge_sort = merge_sort;
+
+function Shell(arr){
+	let t1 = performance.now();
+	A = arr.slice();
+	var n = A.length, i = Math.floor(n/2);
+    while (i > 0)
+     { for (var j = 0; j < n; j++)
+        { var k = j, t = A[j];
+          while (k >= i && A[k-i] > t)
+           { A[k] = A[k-i]; k -= i; }
+          A[k] = t;
+        }
+      i = (i==2) ? 1 : Math.floor(i*5/11);
+	 }
+	let t2 = performance.now();
+	console.log(t2-t1);
+	createList(sortedList,A.length,A);
+  };
+window.Shell = Shell;
